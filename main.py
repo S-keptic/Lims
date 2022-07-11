@@ -232,7 +232,7 @@ async def punch(ctx,user:discord.Member=None):
         em=discord.Embed(colour=(discord.Colour.random()),description=f"{ctx.author.mention} ***punches*** {user.mention}")
         em.set_image(url=res['url'])
         await ctx.reply(embed=em)
-
+ 
 #waifu
 @client.command()
 async def waifu(ctx):

@@ -382,7 +382,7 @@ async def bj(ctx):
         await ctx.reply("***This is not a NSFW channel 🚫 , Please enable NSFW in your channel settings***")
 
 #fuck
-fucc=["https://cdn.discordapp.com/attachments/993980713173012520/993980827258060912/1.gif",
+fucc=[
     "https://cdn.discordapp.com/attachments/993980713173012520/993980827585224784/2.gif",
     "https://cdn.discordapp.com/attachments/993980711931490374/993987842642554910/ezgif.com-gif-maker.gif",
     "https://cdn.discordapp.com/attachments/993980713173012520/993987055824683048/4.gif",
@@ -392,7 +392,6 @@ fucc=["https://cdn.discordapp.com/attachments/993980713173012520/993980827258060
     "https://cdn.discordapp.com/attachments/993980713173012520/993987058651648021/8.gif",
     "https://cdn.discordapp.com/attachments/993980713173012520/993987059209482420/9.gif",
     "https://cdn.discordapp.com/attachments/993980713173012520/993987059922518056/10.gif",
-    "https://cdn.discordapp.com/attachments/993980713173012520/993987060358709399/11.gif",
     "https://cdn.discordapp.com/attachments/993980711931490374/994575763162542121/25.gif",
     "https://cdn.discordapp.com/attachments/993980711931490374/994575775246336080/12.gif",
     "https://cdn.discordapp.com/attachments/993980711931490374/994575775917428776/14.gif",

@@ -87,7 +87,6 @@ async def anime(ctx, *, query: str) -> None:
         em.add_field(name="`Status`",value=f"{anime.status}",inline=True)
         em.add_field(name="`Score`",value=f"{anime.rating}",inline=True)
         em.add_field(name="`Age rating`",value=f"{anime.age_rating}",inline=True)
-        em.add_field(name="`NSFW`",value=f"{anime.nsfw}",inline=True)
 
 
 

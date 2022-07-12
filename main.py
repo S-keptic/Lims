@@ -75,7 +75,7 @@ async def anime(ctx, *, query: str) -> None:
 
     anime = await kitsu.search_anime(query_formatted, limit=1)
     if anime.age_rating=="R" or "PG":
-        await ctx.reply(f"*** {anime.search} is a NSFW anime 🚫 , Please  enable NSFW in your channel settings***")
+        await ctx.reply("*** This is a NSFW anime 🚫 , Please  enable NSFW in your channel settings***")
     
     else:
         em=discord.Embed(title="***Anime Search***",colour=(discord.Colour.purple()),description=
@@ -105,7 +105,7 @@ async def manga(ctx, *, query: str) -> None:
 
     manga = await kitsu.search_manga(query_formatted, limit=1)
     if manga.age_rating=="R" or "PG":
-        await ctx.reply(f"*** {manga.search} is a NSFW manga 🚫 , Please  enable NSFW in your channel settings***")
+        await ctx.reply("*** This is a NSFW manga 🚫 , Please  enable NSFW in your channel settings***")
     
     else:
         em=discord.Embed(title="***Manga Search***",colour=(discord.Colour.purple()),description=

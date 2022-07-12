@@ -74,22 +74,26 @@ async def anime(ctx, *, query: str) -> None:
     kitsu = askitsu.Client()
 
     anime = await kitsu.search_anime(query_formatted, limit=1)
-    em=discord.Embed(title="***Anime Search***",colour=(discord.Colour.purple()),description=
-    f"***Anime***: {anime.title.en}    \n\n***Episodes***: {anime.episode_count}    \n\n***Description***: {anime.synopsis}  ")
+    if anime.age_rating=="R" or "PG":
+        await ctx.reply(f"*** {anime.search} is a NSFW anime 🚫 , Please  enable NSFW in your channel settings***")
+    
+    else:
+        em=discord.Embed(title="***Anime Search***",colour=(discord.Colour.purple()),description=
+        f"***Anime***: {anime.title.en}    \n\n***Episodes***: {anime.episode_count}    \n\n***Description***: {anime.synopsis}  ")
 
-    em.set_image(url=f"{anime.poster_image.small}")
-    em.add_field(name="`Started at`",value=f"{anime.started_at}",inline=True)
-    em.add_field(name="`Ended at`",value=f"{anime.ended_at}",inline=True)
-    em.add_field(name="`Status`",value=f"{anime.status}",inline=True)
-    em.add_field(name="`Score`",value=f"{anime.rating}",inline=True)
-    em.add_field(name="`Age rating`",value=f"{anime.age_rating}",inline=True)
-    em.add_field(name="`NSFW`",value=f"{anime.nsfw}",inline=True)
+        em.set_image(url=f"{anime.poster_image.small}")
+        em.add_field(name="`Started at`",value=f"{anime.started_at}",inline=True)
+        em.add_field(name="`Ended at`",value=f"{anime.ended_at}",inline=True)
+        em.add_field(name="`Status`",value=f"{anime.status}",inline=True)
+        em.add_field(name="`Score`",value=f"{anime.rating}",inline=True)
+        em.add_field(name="`Age rating`",value=f"{anime.age_rating}",inline=True)
+        em.add_field(name="`NSFW`",value=f"{anime.nsfw}",inline=True)
 
 
 
 
-    await kitsu.close()
-    await ctx.reply(embed=em)
+        await kitsu.close()
+        await ctx.reply(embed=em)
 
 
 #mangasearch
@@ -100,19 +104,23 @@ async def manga(ctx, *, query: str) -> None:
     kitsu = askitsu.Client()
 
     manga = await kitsu.search_manga(query_formatted, limit=1)
-    em=discord.Embed(title="***Manga Search***",colour=(discord.Colour.purple()),description=
-    f"***Manga***: {manga.title.en}    \n\n***Chapters***: {manga.chapter_count}    \n\n***Description***: {manga.synopsis}  ")
+    if manga.age_rating=="R" or "PG":
+        await ctx.reply(f"*** {manga.search} is a NSFW manga 🚫 , Please  enable NSFW in your channel settings***")
+    
+    else:
+        em=discord.Embed(title="***Manga Search***",colour=(discord.Colour.purple()),description=
+        f"***Manga***: {manga.title.en}    \n\n***Chapters***: {manga.chapter_count}    \n\n***Description***: {manga.synopsis}  ")
 
-    em.set_image(url=f"{manga.poster_image.small}")
-    em.add_field(name="`Started at`",value=f"{manga.started_at}",inline=True)
-    em.add_field(name="`Ended at`",value=f"{manga.ended_at}",inline=True)
-    em.add_field(name="`Status`",value=f"{manga.status}",inline=True)
-    em.add_field(name="`Age rating`",value=f"{manga.age_rating}",inline=True)
-    em.add_field(name="`Rank`",value=f"{manga.rating_rank}",inline=True)
-    em.add_field(name="`Score`",value=f"{manga.rating}",inline=True)
+        em.set_image(url=f"{manga.poster_image.small}")
+        em.add_field(name="`Started at`",value=f"{manga.started_at}",inline=True)
+        em.add_field(name="`Ended at`",value=f"{manga.ended_at}",inline=True)
+        em.add_field(name="`Status`",value=f"{manga.status}",inline=True)
+        em.add_field(name="`Age rating`",value=f"{manga.age_rating}",inline=True)
+        em.add_field(name="`Rank`",value=f"{manga.rating_rank}",inline=True)
+        em.add_field(name="`Score`",value=f"{manga.rating}",inline=True)
 
-    await kitsu.close()
-    await ctx.reply(embed=em)
+        await kitsu.close()
+        await ctx.reply(embed=em)
 
 
 

@@ -73,7 +73,7 @@ async def anime(ctx, *, query: str) -> None:
     query_formatted = query.replace(" ", "+")
     kitsu = askitsu.Client()
     anime = await kitsu.search_anime(query_formatted, limit=1)
-    if anime.age_rating=="R" or "PG": 
+    if anime.age_rating=="R": 
         if ctx.channel.is_nsfw():
             em=discord.Embed(title="***Anime Search***",colour=(discord.Colour.purple()),description=
         f"***Anime***: {anime.title.en}    \n\n***Episodes***: {anime.episode_count}    \n\n***Description***: {anime.synopsis}  ")
@@ -125,7 +125,7 @@ async def manga(ctx, *, query: str) -> None:
     kitsu = askitsu.Client()
 
     manga = await kitsu.search_manga(query_formatted, limit=1)
-    if manga.age_rating=="R" or "PG":
+    if manga.age_rating=="R":
             if ctx.channel.is_nsfw():
                 em=discord.Embed(title="***Manga Search***",colour=(discord.Colour.purple()),description=
                 f"***Manga***: {manga.title.en}    \n\n***Chapters***: {manga.chapter_count}    \n\n***Description***: {manga.synopsis}  ")

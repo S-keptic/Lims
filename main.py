@@ -41,7 +41,6 @@ async def help(ctx):
     em=discord.Embed(title="***LIMS HELP MENUE***📙",colour=discord.Colour.red(),description="`My prefix is !`")
     em.add_field(name="__1)Utility command 🤖 __",value="```!anime <anime name>\n!manga <manga name>\n!stats```")
     em.add_field(name="__2)SFW commands 🤖 __",value="```!hug !pat !cuddle !slap !punch !avatar !neko !tickle !wallpaper !cry !smug ```",inline=False)
-    em.add_field(name="__3)NSFW commands 🤖 __",value="```!fuck !bj !boobs !spank```",inline=False)
     em.set_image(url="https://cdn.discordapp.com/attachments/994580760113717258/994912666483175474/standard2.gif")
     em.set_footer(text="Lims Bot🌸",icon_url="https://cdn.discordapp.com/attachments/994580760113717258/994913278042054776/botpfp1.jpeg")
     await ctx.reply(embed=em)
@@ -295,14 +294,7 @@ async def waifu(ctx):
 
 
 
-#gasm
-@client.command()
-async def gasm(ctx):
-    r= requests.get("https://nekos.life/api/v2/img/gasm")
-    res=r.json()
-    em=discord.Embed(colour=(discord.Colour.random()),description=f"{ctx.author.mention}")
-    em.set_image(url=res['url'])
-    await ctx.reply(embed=em)
+
 
 #cuddle
 @client.command()
@@ -381,126 +373,11 @@ async def kiss(ctx,user:discord.Member=None):
             await ctx.reply(embed=em)
 
 
-#ngif
-
-@client.command()
-async def ngif(ctx):
-    r= requests.get("https://nekos.life/api/v2/img/ngif")
-    res=r.json()
-    em=discord.Embed(colour=(discord.Colour.random()),description=f"{ctx.author.mention}")
-    em.set_image(url=res['url'])
-    await ctx.reply(embed=em)
-
-
-
-#nsfw[not safe for work]
-
-
-#bj
 
 
 
 
-blowjob=['https://cdn.discordapp.com/attachments/993792792360915035/993792859876630589/1.gif',
-    'https://cdn.discordapp.com/attachments/993792792360915035/993795470461771786/2.gif',
-    "https://cdn.discordapp.com/attachments/993792792360915035/993966283202756608/3.gif",
-    "https://cdn.discordapp.com/attachments/993792792360915035/993966283567673404/4.gif",
-    "https://cdn.discordapp.com/attachments/993792792360915035/993966284196814938/5.gif",
-    "https://cdn.discordapp.com/attachments/993792792360915035/993966285002125432/7.gif",
-    "https://cdn.discordapp.com/attachments/993792792360915035/993966285350244352/8.jpg",
-    "https://cdn.discordapp.com/attachments/993792792360915035/993966285606113401/9.gif",
-    "https://cdn.discordapp.com/attachments/993792792360915035/993966285991981067/10.gif",
-    "https://cdn.discordapp.com/attachments/993792792360915035/993966286306545684/11.gif",
-    "https://cdn.discordapp.com/attachments/993792792360915035/993966286583386112/12.gif",
-    "https://cdn.discordapp.com/attachments/993792792360915035/993971957500498052/14.gif",
-    "https://cdn.discordapp.com/attachments/993792792360915035/993971957815054356/15.gif",
-    "https://cdn.discordapp.com/attachments/993980711931490374/994554034981712012/11.gif",
-    "https://cdn.discordapp.com/attachments/993980711931490374/994554035547951134/16.gif",
-    "https://cdn.discordapp.com/attachments/993980711931490374/994554036286144522/17.gif",
 
-    ]
-
-
-    
-@client.command()
-async def bj(ctx):
-    if ctx.channel.is_nsfw():
-        embed=discord.Embed(colour=(discord.Colour.random()),
-        description=f"{ctx.author.mention}")
-        embed.set_image(url=(random.choice(blowjob)))
-        await ctx.reply(embed=embed)
-    else:
-        await ctx.reply("***This is not a NSFW channel 🚫 , Please enable NSFW in your channel settings***")
-
-#fuck
-fucc=[
-    "https://cdn.discordapp.com/attachments/993980713173012520/993980827585224784/2.gif",
-    "https://cdn.discordapp.com/attachments/993980711931490374/993987842642554910/ezgif.com-gif-maker.gif",
-    "https://cdn.discordapp.com/attachments/993980713173012520/993987055824683048/4.gif",
-    "https://cdn.discordapp.com/attachments/993980711931490374/993988445871538247/ezgif.com-gif-maker1.gif",
-    "https://cdn.discordapp.com/attachments/993980713173012520/993987057196216371/6.gif",
-    "https://cdn.discordapp.com/attachments/993980713173012520/993987058001526924/7.gif",
-    "https://cdn.discordapp.com/attachments/993980713173012520/993987058651648021/8.gif",
-    "https://cdn.discordapp.com/attachments/993980713173012520/993987059209482420/9.gif",
-    "https://cdn.discordapp.com/attachments/993980713173012520/993987059922518056/10.gif",
-    "https://cdn.discordapp.com/attachments/993980711931490374/994575763162542121/25.gif",
-    "https://cdn.discordapp.com/attachments/993980711931490374/994575775246336080/12.gif",
-    "https://cdn.discordapp.com/attachments/993980711931490374/994575775917428776/14.gif",
-    "https://cdn.discordapp.com/attachments/994578029781188738/994578150891724830/11.gif",
-    "https://cdn.discordapp.com/attachments/939199144545878117/994578566719217684/10.gif",
-    "https://cdn.discordapp.com/attachments/939199144545878117/994578567281262692/9.gif",
-    "https://cdn.discordapp.com/attachments/939199144545878117/994578567675510854/8.gif",
-    "https://cdn.discordapp.com/attachments/939199144545878117/994578568183038042/7.gif",
-    "https://cdn.discordapp.com/attachments/939199144545878117/994578568501796874/6.gif",
-    "https://cdn.discordapp.com/attachments/939199144545878117/994578568925425704/5.gif",
-    "https://cdn.discordapp.com/attachments/939199144545878117/994578569378402384/4.gif"
-    ]
-@client.command()
-async def fuck(ctx):
-    if ctx.channel.is_nsfw():
-        embed=discord.Embed(colour=(discord.Colour.random()),
-        description=f"{ctx.author.mention}")
-        embed.set_image(url=(random.choice(fucc)))
-        await ctx.reply(embed=embed)
-    else:
-        await ctx.reply("***This is not a NSFW channel 🚫 , Please enable NSFW in your channel settings***")
-
-
-#spank
-
-@client.command()
-
-async def spank(ctx):
-    if ctx.channel.is_nsfw():
-        r= requests.get("https://nekos.life/api/v2/img/spank")
-        res=r.json()
-        em=discord.Embed(colour=(discord.Colour.random()),description=f"{ctx.author.mention}")
-        em.set_image(url=res['url'])
-        await ctx.reply(embed=em)
-    else:
-        await ctx.reply("***This is not a NSFW channel 🚫 , Please enable NSFW in your channel settings***")
-
-    
-
-                    
-#boobs
-booba=["https://cdn.discordapp.com/attachments/994927245091156008/994927981736755200/1.gif",
-        "https://cdn.discordapp.com/attachments/994948123468243055/994948279353737227/2.gif",
-        "https://cdn.discordapp.com/attachments/994948123468243055/994948328624238592/1.gif",
-        "https://cdn.discordapp.com/attachments/994948123468243055/994948597823053864/3.gif",
-        "https://cdn.discordapp.com/attachments/994948123468243055/994948882092015656/5.gif",
-        "https://cdn.discordapp.com/attachments/994948123468243055/994949055203512400/4.gif",
-        "https://cdn.discordapp.com/attachments/994948123468243055/994949380006215753/7.gif",
-        "https://cdn.discordapp.com/attachments/994948123468243055/994950339063185429/8.gif"]
-
-
-@client.command()
-async def boobs(ctx):
-    if ctx.channel.is_nsfw():
-        embed=discord.Embed(colour=(discord.Colour.random()),description=f"{ctx.author.mention}")
-        embed.set_image(url=(random.choice(booba)))
-        await ctx.reply(embed=embed)
- 
 
 
 

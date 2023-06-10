@@ -5,7 +5,7 @@ import requests
 import os
 from os import environ, link
 import askitsu
-kitsu = askitsu.Client()
+kitsu = askitsu.Client() 
    
    
 

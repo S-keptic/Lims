@@ -7,7 +7,7 @@ from os import environ, link
 import askitsu
 kitsu = askitsu.Client() 
    
-   
+    
 
 client=commands.Bot(command_prefix="!", intents=discord.Intents.all())
 
